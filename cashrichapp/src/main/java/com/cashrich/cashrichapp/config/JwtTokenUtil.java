@@ -17,10 +17,10 @@ import java.util.function.Function;
 @Component
 public class JwtTokenUtil {
 	
-	//requirement :
-    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60; // this is 5hr * 60min * 60 seconds
+	
+    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60; 
 
-//    private String secret = "afafasfafafasfasfasfafacasdasfasxASFACASDFACASDFASFASFDAFASFASDAADSCSDFADCVSGCFVADXCcadwavfsfarvf";
+
     private String secret ="5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437";
     public String generateToken(String userName) { 
         Map<String, Object> claims = new HashMap<>(); 
@@ -72,12 +72,6 @@ public class JwtTokenUtil {
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token)); 
     } 
     
-//    public UserDetails userDetails(String userName){
-//        return userRepo
-//                .findByUsername(userName)
-//                .map(UserDetail::new)
-//                .orElseThrow(()-> new UsernameNotFoundException("UserEmail: "+emailId+" does not exist"));
-//    }
 
 	
 
